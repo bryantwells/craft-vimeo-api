@@ -24,7 +24,16 @@ To install the plugin, follow these instructions.
 
 ## Vimeo API Overview
 
--Insert text here-
+Edit config in `config/vimeo-api.php`:
+```
+return [
+
+    'CLIENT_ID' => getenv('VIMEO_CLIENT_ID'),
+    'CLIENT_SECRET' => getenv('VIMEO_CLIENT_SECRET'),
+    'ACCESS_TOKEN' => getenv('VIMEO_ACCESS_TOKEN')
+
+];
+```
 
 ## Configuring Vimeo API
 

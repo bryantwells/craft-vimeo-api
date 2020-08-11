@@ -1,0 +1,45 @@
+{
+    "name": "bryantwells/vimeo-api",
+    "description": "Request video URL from Vimeo Pro using the PHP API",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "vimeo pro"
+    ],
+    "support": {
+        "docs": "https://github.com/bryantwells/vimeo-api/blob/master/README.md",
+        "issues": "https://github.com/bryantwells/vimeo-api/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bryant Wells",
+            "homepage": "https://github.com/bryantwells"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0",
+        "vimeo/vimeo-api": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "bryantwells\\vimeoapi\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Vimeo API",
+        "handle": "vimeo-api",
+        "developer": "Bryant Wells",
+        "developerUrl": "https://github.com/bryantwells",
+        "documentationUrl": "https://github.com/bryantwells/vimeo-api/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/bryantwells/vimeo-api/master/CHANGELOG.md",
+        "components": {
+            "video": "bryantwells\\vimeoapi\\services\\Video"
+        },
+        "class": "bryantwells\\vimeoapi\\VimeoApi"
+    }
+}

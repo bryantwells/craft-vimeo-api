@@ -35,7 +35,12 @@ class Video extends Component {
     {
         if ($videoId) {
             $response = $this->client->request('/videos/'.$videoId, array('fields' => 'files'), 'GET');
-            return $response['body']['files'];
+            $files = array_map(function($a) {
+                return [
+                    $a['public_name'] => $a
+                ];
+            }, $response['body']['files']);
+            return call_user_func_array("array_merge", $files);
         } else {
             return 0;
         }

@@ -96,6 +96,7 @@ class VimeoApi extends Plugin
             ),
             __METHOD__
         );
+
     }
 
     // Protected Methods

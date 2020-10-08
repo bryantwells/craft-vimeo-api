@@ -32,4 +32,13 @@ class VimeoApiVariable
     {
         return VimeoApi::$plugin->video->getVideoFiles($videoId);
     }
+
+    /**
+     * @param null $optional
+     * @return string
+     */
+    public function request($url = null, $obj = null)
+    {
+        return VimeoApi::$plugin->video->request($url, $obj);
+    }
 }

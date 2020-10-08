@@ -47,7 +47,15 @@ class Video extends Component {
         } else {
             return 0;
         }
-        
+    }
+
+    /*
+     * @return mixed
+     */
+    public function request($url = null, $obj = null)
+    {
+        $response = $this->client->request($url, $obj, 'GET');
+        return isset($response['body']['data']) ? $response['body']['data'] : null;
     }
 
     /*

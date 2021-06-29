@@ -43,7 +43,8 @@ class Video extends Component {
             }, $response['body']['files']);
             $files = call_user_func_array("array_merge", $files);
             $pictures = $response['body']['pictures'];
-            return array('files' => $files, 'pictures' => $pictures);
+            $ratio = $response['body']['height'] / $response['body']['width'];
+            return array('files' => $files, 'pictures' => $pictures, 'ratio' => $ratio);
         } else {
             return 0;
         }
